@@ -1,0 +1,293 @@
+
+/*base*/
+body, html{
+
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%,#20222a 68% 70%,#0000 72%;
+    background: 
+      radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
+      radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
+      radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
+      radial-gradient(var(--_g) 0 75%,var(--_c)) 0 0/var(--_s), 
+      repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
+      radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+
+    
+    margin:0;
+    padding:0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#e0e0e0;
+}
+
+
+
+/*animations*/
+@keyframes mySlide{
+    from{transform:translateY(0%);}
+    to{transform:translateY(100%);}
+}
+@keyframes buttonAppear{
+    0%{opacity: 0; transform: translateY(0%);}
+    100%{opacity:50%; transform: translateY(50%);}
+}
+@keyframes fadeIn{
+    from{opacity: 0; transform: translateY(10px);}
+    to{opacity:50%; transform: translateY(0);}
+}
+@keyframes slideDown{
+    from{max-height:0; opacity:0;}
+    to{max-height:500px;opacity:1;}
+}
+@keyframes slideUp{
+    from{max-height:500px;opacity:1;}
+    to{max-height:0; opacity:0;}
+}
+
+
+
+/*main-title*/
+#main-title{
+    text-align: center;
+    animation: mySlide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+
+/*tab-buttons*/
+.tab-buttons{
+    display: flex;
+    width:100%;
+    max-width: 300px;
+    max-height: 20px;
+    margin: 30px auto;
+    padding: 5px;
+    background-color: #333;
+    border-radius: 7px;
+    opacity: 0;
+
+    animation: buttonAppear;
+    animation-duration: 3s;
+    animation-delay:0s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.19, 1, 0.22, 1);
+}
+.tab-buttons button{
+    flex:1;
+    border: none;
+    background-color: #333;
+    color:#e0e0e0;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+.tab-buttons button span {
+    font-size: 11px; /* Adjust this value to make the text smaller */
+}
+
+.tab-buttons button:hover{
+    transform: scale(1.1); /* This will enlarge the text */
+}
+
+/* Search Container */
+#search-container {
+    overflow: hidden;
+    max-width: 0; /* Start hidden with 0 width */
+    transition: max-width 1.5s ease; /* Smooth transition for width */
+    display: inline-block; /* Keep it inline with other elements */
+    vertical-align: middle; /* Align with other elements */
+}
+/* Input Styling */
+#search-input {
+    width: 100%;
+    font-size: 14px;
+    color: #e0e0e0; /* Assurez-vous que la couleur du texte est visible */
+    background-color: #333; /* Couleur de fond */
+    border: none;
+    outline: none;
+}
+/* Hide text in buttons while keeping the icon visible */
+.hide-text span {
+    display: none; /* This will hide the text */
+}
+
+
+
+/*text-block*/
+.text-block{
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.8); /* Transparence nécessaire pour backdrop-filter */
+    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Ajout d'une ombre pour la profondeur */
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    animation: fadeIn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+
+/*text-info*/
+.text-info, .message-score{
+    color:#e0e0e09a;
+}
+
+#up-score, #down-score{
+    position: absolute; /* Assurez-vous que les scores sont en position absolue */
+    right: -3.1px; /* Ajustez cette valeur pour déplacer les scores vers la gauche */
+    font-size: 0.8em;
+    color: white;
+    opacity:0;
+    transition: max-height 0.5s  ease-out, opacity 0.5s ease-out;
+}
+
+#up-score{
+    top:-15px;
+    right: -3px;
+}
+
+#down-score{
+    bottom:-16px;
+}
+
+#up-score.open, #down-score.open {
+    transition: max-height 0.5s  ease-out, opacity 0.5s ease-out;
+    opacity:1;
+    
+}
+#message-date{
+    font-size: 0.8em;
+}
+
+#up-score-icon, #down-score-icon {
+    position:absolute;
+    left:7px;
+    width: 1px; 
+}
+
+#up-score-icon {
+    top: 25px; /* Place la flèche vers le haut en haut */
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 22px solid #121212;
+}
+
+#down-score-icon {
+    bottom: 25px; /* Place la flèche vers le bas en bas */
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 22px solid #121212;
+}
+#message-date{
+    position: absolute;
+    right: 10px; /* Place la date à 10px du bord droit */
+    top: 10px; /* Ajustez si nécessaire */}
+
+
+.actions {
+    text-align: right; 
+}
+
+
+/*action-buttons*/
+.actions button{
+    padding: 10px 15px;
+    border: none;
+    background-color:rgba(51, 51, 51, 0);
+    color:#e0e0e0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.actions button:hover{
+    background-color: #555;
+
+}
+
+/*like button*/
+.actions .like:hover, .actions .like.active {
+    color: #f23729;
+}
+
+.actions .dislike:hover, .actions .dislike.active {
+    color: #121212;
+}
+
+/*comment button*/
+.comments{
+    margin-top: 10px;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s  ease-out, opacity 0.5s ease-out;
+}
+.comments.open{
+    max-height: 500px;
+    opacity: 1;
+}
+.comment-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.comment-list .comment{
+    display: inline-block;
+    margin-top: 6px;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 5px;
+    word-break: break-word;
+    max-width: 100%;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+/*comment input*/
+.comment-form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    padding-bottom: 50px; /* Ajoute de l'espace au bas pour éviter le chevauchement */
+}
+
+.comment-form textarea {
+    flex-grow: 1; /* S'étend pour occuper tout l'espace restant */
+    border-radius: 5px;
+    border: none;
+    background-color: #222;
+    color: #e0e0e0;
+    margin-right: 10px; /* Espace entre le textarea et le bouton */
+}
+
+.comment-form button {
+    background-color: rgba(51, 51, 51, 0);
+    color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    float: right; /* Colle le bouton à droite */
+}
+
+.comment-form button i {
+    font-size: 1.6em; /* Augmente la taille de l'icône */
+}
+
+.comment-form button:hover {
+    background-color: #555;
+    color: #fff;
+}
+

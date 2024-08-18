@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-title">Google Form Aggregator </h1>
+        <div class="tab-buttons">
+            <button id="popular-button" onclick="toggleAllButtonText();popularSearch()">
+                <span>(Popular)</span> <i class="fa fa-star"></i>
+            </button>
+            <button id="latest-button" onclick="toggleAllButtonText();latestSearch()">
+                <span>(Latest)</span> <i class="fa fa-clock-o"></i>
+            </button>
+            <button id="search-button" onclick="toggleSearch();toggleAllButtonText()">
+                <span>(Search)</span> <i class="fa fa-search"></i>
+            </button>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Search messages..." oninput="searchMessages(this.value)">
+            </div>
+        </div>
+        
+        <div id="message-container">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

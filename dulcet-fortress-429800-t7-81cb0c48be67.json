@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "dulcet-fortress-429800-t7",
+  "private_key_id": "81cb0c48be67b7d9d3c51a0bd2d4aeb20d31cade",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCf9IpmUzDqPK5J\nYejoBTYh25lJNCXMyiZFbt346hw21DIfjJxYW2cgh6EWXAL97oUUpENKw40fB2Nr\ndu4G4hyFOUCY939Oq0Sxl6ryjyqSR6mu8z7U/fR8cOegzRgmoS4L6o3EDf9sVKhA\nFcfACYYYA/Z0fHcTIE9E+pExrUYO1VuP1enHik6k7jShiZrD8uqtSfgSpb8H7kPe\nmWgGiMXGIOtl2n6E7RXdyR2n/Uk4Dxe0zJti2kbw1W/5dx17nSjRCNI0Qi4e7mAg\nQoJ38EQVD0qHKAIUkSR7t5YciCtGG3uI9UYzT38gc/ThJyC1ahKwX7gxXIVetyqT\nct9w3wRdAgMBAAECggEADT5n3CeMsAREsPY+nMFbtUtzomRDMfTV3N9cWSD3I5IH\nsWWIx2cP/5lDPPDy3XgLhEVCfhT5YQWRVYNEG4VKs7wlDVVGsOqM1kB2yr0QWwq8\ncawZunRpcwk9IGsC0iX7xEhQIxi+moda4+15u7x+Igxn8kag7FA7R/yQG4MbfxxJ\nPjwUkXKL+z520hz4Nrm/yM74mUZHAoI+ZoBnOrvx02SxYakikFDbl33SFXrL745v\ncMXPzDu06/A6fjG6C+N5LmgJgXvUxrH6+qwNswMGBzwTOkvAR8+qgOu7amw0lYyt\nyk/fJYzApEfhcQaLTeKqJ8y0Q2KIGsipqlh1LQvViQKBgQDSui+KE0wgzDQARpae\n5/EbUvS/JtVhUHwdw5OL0mq1ZvlePNR/3WAdg7l4lCb7bIFYQ/bce2IrjHAyKg0F\nBsOnneJE5gX6SgjbmQyH6qgYWQzkYnCvPQTrznb1ui0F0YvrUhJJFqU+U3j2JnPV\n5HU4oeV7AD234uimrF32BUlrlQKBgQDCUe/i9sU0wZnTVHXUHU2i7pb4KFxsoou8\nRgjzg84GBhTYGQR5dhmWtkxiDwTQS+5qc5I4AhbUjyrHfcMuEgK5JZmlov+N+dMr\nQpO3P9EacXmVmU5QO4JAgRUo3PFKShOKLRDlGh9H9VoefxFlneA4o3LpYzutF8DD\n5joHM4NDqQKBgQCAnNAtBpAdKGTIkkyVmdxnH99u10W+ij/mbpqb6QXlx36FTL0p\neTSTbvUBKfMM2vGqrHh7ovaMu78ybsXZfoJlyA/0myuk0hDL7oJeZhLIIXmj3o0F\n90kMnsuuOD4IYhdyvXmZkC+0dX/LRDbIohIFSZJk2wXQOLZkG6mRYTKpbQKBgQCK\ncBl5FtmUJkFS3586SM4gv93qWcbO1la7ASIrasGCZR7AfcJETjEYwDNWwOBrDU2D\npWaMZGCjeoO9sAk3bzllcjYuXRu3qD4bWcknCl4Mer9mJtw2KM846T2L6Sw2AuQ8\n0rJwpdWXTGKxy1E3lexCLaAWSc4gGQYKCqFYtAhWUQKBgDdEuYr0Gq6VRzjpFEQZ\nmHVWgFn3tdiWT+2tAdJpB0WrI8JnNmRnXvlUpMip5cYSg9oLYx9AoGcReyF1X7Sn\nTB0WRxKSQ71LZX41jy/elzSZ11PwZmwjAiOPHl5XhSpJMxrf3ec6pCmIcV35GcVs\nLsbUxB3dzgriiK9KE56TyGQ1\n-----END PRIVATE KEY-----\n",
+  "client_email": "gossiping@dulcet-fortress-429800-t7.iam.gserviceaccount.com",
+  "client_id": "101230290397350320928",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gossiping%40dulcet-fortress-429800-t7.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
