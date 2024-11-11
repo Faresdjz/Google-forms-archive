@@ -97,4 +97,4 @@ To run this project locally, follow these steps:
 > An example of the like and comment functionality, encouraging engagement on individual posts.
 
 # Learning Experience
-This project served as my introduction to JavaScript, which I learned by coding this site. Combining Flask on the backend with JavaScript for client-side interactivity, this project helped me understand how to build a functional web application that integrates with external APIs. It also offered hands-on experience with managing user interactions, data display, and creating a seamless user experience across the site
+This project served as my introduction to JavaScript, which I learned by coding this site. Combining Flask on the backend with JavaScript for client-side interactivity, this project helped me understand how to build a functional web application that integrates with external APIs. It also offered hands-on experience with managing user interactions, data display, and creating a seamless user experience across the site.
