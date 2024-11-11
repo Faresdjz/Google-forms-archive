@@ -24,12 +24,12 @@ The site is designed to be user-friendly, allowing visitors to engage with the m
 ## Installation
 To run this project locally, follow these steps:
 1. ### __Clone the project__:
-   ```
+   ```shell
    git clone https://github.com/Faresdjz/Google-forms-archive.git
    ```
 2. ### __Install Flask__:
    Ensure Flask is installed in your environment
-   ```
+   ```shell
    pip install flask
    ```
 4. ### __Verify your api keys__:
@@ -40,23 +40,23 @@ To run this project locally, follow these steps:
    - You have two keys to get: API key and service account key. From here, it should be fairly straightfoward.
    - When the API key is generated, replace it on the ``script.js`` file:
      
-     ```
+     ```javascript
      const apiKey = "AIzaSyBZPvSbSAH0IilJHoGnZupJ0XupwgN6rKo";
      ```
    - Lastly, when your service account is created, it should have downloaded a .json file. Replace mine (dulcet-fortress...json) with yours, than go to the .py file and change this line with the name of your service account .json file:
      
-     ```
+     ```javascript
      SERVICE_ACCOUNT_FILE = 'dulcet-fortress-429800-t7-81cb0c48be67.json'
      ```
    - Almost done, you just need to change the reference of your google sheet.
    - Go to your google forms -> answers and then the option to open it in google sheets should appear
    - Take the url of your google sheets and extract the id. This example should make it clear:
-     ```
+     ```javascript
      // https://docs.google.com/spreadsheets/d/14fJ9BUFKBT2Jmj3yn52LfB3fJ4WLuQVPpshgm1lOnv8/edit?resourcekey=&gid=1925173698#gid=1925173698
      const sheetId = "14fJ9BUFKBT2Jmj3yn52LfB3fJ4WLuQVPpshgm1lOnv8";
      ```
    - Last step, change the name of the sheet to the name you assigned (just like excel, the name of the sheet should be at the bottom of the page)
-     ```
+     ```javascript
      // Change 'Réponses au formulaire 1' with your sheet's name
      const range = "'Réponses au formulaire 1'!A6:E200000";
      ```
